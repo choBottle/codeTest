@@ -120,55 +120,32 @@ public class Main {
 }
 ```
 
-## 5. 제곱하여 출력하기
+## 5. 짝수만 거꾸로 출력하기
 
-<img width="854" height="1014" alt="image" src="https://github.com/user-attachments/assets/73893416-00a4-4ee9-8f68-6c14a3e61b9c" />
+<img width="793" height="1069" alt="image" src="https://github.com/user-attachments/assets/ac385b9c-f86d-4a63-a9e8-74251dfefab5" />
 
 ```Java
 import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        int N = sc.nextInt();
+        int n = sc.nextInt();
+        List<Integer> evens = new ArrayList<>();
 
-        int[] arr = new int[N];
-
-        for(int i = 0; i < N; i++) {
-            arr[i] = sc.nextInt();
+        for (int i = 0; i < n; i++) {
+            int num = sc.nextInt();
+            if (num % 2 == 0) {
+                evens.add(num);
+            }
         }
 
-        for(int i = 0; i < N; i++) {
-            System.out.print(arr[i]*arr[i] + " ");
+        for (int i = evens.size() - 1; i >= 0; i--) {
+            System.out.print(evens.get(i) + " ");
         }
-    }
-}
-```
-
-## 6. 일의 자리 배열
-
-<img width="884" height="994" alt="image" src="https://github.com/user-attachments/assets/addb24aa-f759-40d7-a62d-80ce8bc92ba9" />
-
-```Java
-import java.util.Scanner;
-
-public class Main {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-
-        int[] arr = new int[10];
-
-        arr[0] = sc.nextInt();
-        arr[1] = sc.nextInt();
-
-        for(int i = 2; i < 10; i++){
-            arr[i] = (arr[i-1] + arr[i-2])%10;
-       }
-
-       for(int i = 0; i < 10; i++) {
-        System.out.print(arr[i] + " ");
-       }
     }
 }
 ```
