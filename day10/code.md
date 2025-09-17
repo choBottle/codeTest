@@ -156,3 +156,30 @@ public class Main {
 }
 ```
 
+## 6. 특정 원소들의 합
+
+<img width="583" height="971" alt="image" src="https://github.com/user-attachments/assets/91187c66-6fae-4999-bbf7-a650b19f634d" />
+
+```Java
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int[][] arr = new int[4][4];
+        int result = 0;
+
+        for(int i = 0; i < 4; i++) {
+            for(int j = 0; j < 4; j++) {
+                arr[i][j] = sc.nextInt();
+                if(i >= j) {
+                    result += arr[i][j];
+                }
+            }
+        }
+
+        System.out.print(result);
+    }
+}
+```
