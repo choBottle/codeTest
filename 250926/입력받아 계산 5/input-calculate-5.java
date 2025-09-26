@@ -5,7 +5,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         int a = sc.nextInt();
-        int b = sc.nesxtInt();
+        int b = sc.nextInt();
 
         System.out.print(a+b);
     }
