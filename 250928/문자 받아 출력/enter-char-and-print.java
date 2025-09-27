@@ -6,6 +6,6 @@ public class Main {
 
         String c = sc.next();
 
-        System.out.print()k
+        System.out.print(c);
     }
 }
