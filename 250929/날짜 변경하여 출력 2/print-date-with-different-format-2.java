@@ -12,6 +12,6 @@ public class Main {
         int m = Integer.parseInt(arr[1]);
         int y = Integer.parseInt(arr[2]);
         
-        System.out.print(y + "." + m + "." + d);
+        System.out.print(y + "." + d + "." + m);
     }
 }
