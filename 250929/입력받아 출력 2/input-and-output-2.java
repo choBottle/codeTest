@@ -8,9 +8,9 @@ public class Main {
 
         String[] arr = a.split("-");
 
-        int d = Integer.parseInt(arr[0]);
-        int m = Integer.parseInt(arr[1]);
-        
-        System.out.print(d + m);
+        int b = Integer.parseInt(arr[0]);
+        int c = Integer.parseInt(arr[1]);
+
+        System.out.print(b + c);
     }
 }
