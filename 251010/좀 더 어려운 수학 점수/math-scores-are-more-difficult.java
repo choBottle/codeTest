@@ -9,9 +9,9 @@ public class Main {
         int bMath = sc.nextInt();
         int bEnglish = sc.nextInt();
 
-        if(aMath >= bMath) {
+        if(aMath > bMath) {
             System.out.print("A");
-        }else if(aMath <= bMath){
+        }else if(aMath < bMath){
             System.out.print("B");
         }else if(aEnglish >= bEnglish) {
             System.out.print("A");
