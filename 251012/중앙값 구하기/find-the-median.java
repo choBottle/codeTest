@@ -14,13 +14,21 @@ public class Main {
             if(b <= c) {
                 System.out.print(b);
             }else {
-                System.out.print(c);
+                if(a <= c) {
+                    System.out.print(c);
+                }else {
+                    System.out.print(a);
+                }
             }
         }else {
             if(a <= c) {
                 System.out.print(a);
             }else {
-                System.out.print(c);
+                if(b <= c) {
+                    System.out.print(c);
+                }else {
+                    System.out.print(b);
+                }
             }
         }
 
