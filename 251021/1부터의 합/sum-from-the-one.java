@@ -9,9 +9,10 @@ public class Main {
         int sum = 0;
 
         for(int i = 1; i <= n; i++) {
-            if(sum + i <= n) {
-                sum += i;
+            if(sum + i >= n) {
+                break;
             }
+            sum += i;
         }
         System.out.print(sum);
     }
