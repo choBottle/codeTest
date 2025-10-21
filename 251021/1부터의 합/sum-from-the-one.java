@@ -10,10 +10,11 @@ public class Main {
 
         for(int i = 1; i <= 100; i++) {
             if(sum + i >= n) {
+                System.out.print(i);
                 break;
             }
             sum += i;
         }
-        System.out.print(sum);
+        
     }
 }
