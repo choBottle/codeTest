@@ -6,10 +6,10 @@ public class Main {
 
         int n = sc.nextInt();
 
-        int count = 0;
+        int count = 1;
         while(true) {
             if(n == 2) {
-                System.out.println(n);
+                System.out.println(count);
                 break;
             }
 
