@@ -29,9 +29,7 @@ public class Main {
                             System.out.print("* ");
                         }
                     }
-                    if(i%2 == 1) {
-                        a++;
-                    }
+                    a++;
                 }
                 System.out.println();
             }
@@ -57,9 +55,7 @@ public class Main {
                             System.out.print("* ");
                         }
                     }
-                    if(i%2 == 1) {
-                        a++;
-                    }
+                    a++;
                 }
                 System.out.println();
             }  
