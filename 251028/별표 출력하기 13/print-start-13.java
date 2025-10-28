@@ -24,20 +24,20 @@ public class Main {
                 count2++;
             } 
         }
-        for (int i = 1; i <= n; i++) {
-    if (i % 2 == 1) {
-        for (int j = 0; j < count2; j++) {
-            System.out.print("* ");
+        for (int i = n; i <= 2*n; i++) {
+        if (i % 2 == 1) {
+            for (int j = 0; j < count2; j++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+            count2++;
+        }else {
+            for (int j = 0; j < n - count1; j++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+            count1++;
         }
-        System.out.println();
-        count2++;
-    } else {
-        for (int j = 0; j < n - count1; j++) {
-            System.out.print("* ");
         }
-        System.out.println();
-        count1++;
-    }
-}
     }
 }
