@@ -15,7 +15,11 @@ public class Main {
             sum += a;
             count++;
         }
-
-        System.out.print(sum + " " + ((double)sum)/count);
+        if(count == 0) {
+            System.out.print("0 0.0");
+        }else {
+            System.out.print(sum + " " + ((double)sum)/count);
+        }
+        
     }
 }
