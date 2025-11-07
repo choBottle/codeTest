@@ -18,7 +18,7 @@ public class Main {
         if(count == 0) {
             System.out.print("0 0.0");
         }else {
-            System.out.print(sum + " " + ((double)sum)/count);
+            System.out.print(sum + " " + String.format("%.1f",((double)sum)/count));
         }
         
     }
