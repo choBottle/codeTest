@@ -23,6 +23,11 @@ public class Main {
             }
         }
 
-        System.out.print(even + " " + String.format("%.1f",(double)three/threeCount));
+        if(threeCount == 0) {
+            System.out.print(even + " " + "0");
+        }else {
+            System.out.print(even + " " + String.format("%.1f",(double)three/threeCount));
+        }
+        
     }
 }
