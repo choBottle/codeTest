@@ -6,28 +6,26 @@ public class Main {
 
         int count = 0;
         int[] arr = new int[10];
-        int sum = 0;
 
-        for(int i = 0; i < 10; i++) {
+        for (int i = 0; i < 10; i++) {
             int n = sc.nextInt();
-            if(n == 0) {
-                break;
-            }else {
-                arr[count++] = n;
-            }
+            if (n == 0) break;
+            arr[count++] = n;
         }
-        for(int i = count - 3; i < count+1; i++) {
-            if(count - 1 <= 0) {
-                break;
-            }
-            if(i <= 0) {
-                i = 0;
-            }
+
+        if (count == 0) {
+            System.out.println(0);
+            sc.close();
+            return;
+        }
+
+        int start = Math.max(0, count - 3); 
+        int sum = 0;
+        for (int i = start; i < count; i++) {
             sum += arr[i];
         }
 
-        System.out.print(sum);
-
-
+        System.out.println(sum);
+        sc.close();
     }
 }
