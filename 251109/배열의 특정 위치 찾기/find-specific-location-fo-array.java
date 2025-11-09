@@ -26,7 +26,7 @@ public class Main {
         if(threeCount == 0) {
             System.out.print(even + " " + "0.0");
         }else {
-            System.out.print(even + " " + (double)three/threeCount);
+            System.out.print(even + " " + String.format("%.1f",(double)three/threeCount));
         }
         
     }
