@@ -10,14 +10,10 @@ public class Main {
 
         for(int i = 0; i < 10; i++) {
             int n = sc.nextInt();
-
-            if(n % 2 == 0 && n % 3 == 0) {
+            if(n % 2 == 0) {
                 even += n;
-                three += n;
-                threeCount++;
-            }else if(n % 2 == 0) {
-                even += n;
-            }else if(n % 3 == 0) {
+            }
+            if(n % 3 == 0) {
                 three += n;
                 threeCount++;
             }
