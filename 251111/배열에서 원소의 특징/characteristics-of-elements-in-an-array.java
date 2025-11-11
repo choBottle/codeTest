@@ -11,7 +11,7 @@ public class Main {
         int n = sc.nextInt();
         arr[i] = n;
 
-        if(arr[i] == 3) {
+        if(arr[i]%3 == 0) {
             System.out.print(arr[i-1]);
             break;
         }
