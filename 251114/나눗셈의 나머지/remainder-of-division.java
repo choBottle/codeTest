@@ -17,13 +17,10 @@ public class Main {
                 break;
             }
             arr[(a%b)]++;
-            if(a/b == 0) {
-                break;
-            }
             a/=b;
         }
 
-        for(int i = 0; i < 9; i++) {
+        for(int i = 0; i < b; i++) {
             sum += (arr[i] * arr[i]);
         }
 
