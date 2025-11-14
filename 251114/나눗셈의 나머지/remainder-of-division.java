@@ -13,6 +13,9 @@ public class Main {
         int[] arr = {0,0,0,0,0,0,0,0,0,0};
 
         while(true) {
+            if(a == 0) {
+                break;
+            }
             arr[(a%b)]++;
             if(a/b == 0) {
                 break;
