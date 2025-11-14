@@ -13,7 +13,7 @@ public class Main {
         int[] arr = {0,0,0,0,0,0,0,0,0,0};
 
         while(true) {
-            if(a == 0) {
+            if(a <= 1) {
                 break;
             }
             arr[(a%b)]++;
