@@ -22,11 +22,17 @@ public class Main {
                 System.out.println(arr[b-1]);
             }else if(a == 2) {
                 int b = sc.nextInt();
+                int count = 0;
                 for(int j = 0; j < N; j++) {
                     if(arr[j] == b) {
                         System.out.println(j+1);
                         break;
+                    }else {
+                        count++;
                     }
+                }
+                if(count == N) {
+                    System.out.println("0");
                 }
             }else if(a == 3) {
                 int b = sc.nextInt();
