@@ -39,6 +39,9 @@ public class Main {
             break;
         }
         System.out.print(idx + " ");
+        if(idx == 1) {
+            break;
+        }
         max = 0;
         idx2 = idx;
         idx = 0;
