@@ -8,7 +8,7 @@ public class Main {
         int max = 0;
         int idx = 0;
         int idx2 = 0;
-        int[] cnt = new int[5];
+        int[] cnt = new int[n];
 
         for(int i = 0; i < n; i++) {
             cnt[i] = sc.nextInt();
