@@ -25,6 +25,12 @@ public class Main {
             }
         }
 
-        System.out.print(max - min);
+        if(max == 0) {
+            System.out.print(max);
+        }else {
+            System.out.print(max - min);
+        }
+
+        
     }
 }
