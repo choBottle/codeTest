@@ -8,12 +8,12 @@ public class Main {
 
         String s2 = sc.next();
 
-        for(int i = 0; i < s.length()-s2.length()-1; i++) {
+        for(int i = 0; i <= s.length()-s2.length()-1; i++) {
             if(s.substring(i,i+s2.length()).equals(s2)) {
                 System.out.print(i);
                 break;
             }
-            if(i == s.length()- s2.length() - 2) {
+            if(i == s.length()- s2.length() - 1) {
                 System.out.print(-1);
             }
         }
