@@ -10,7 +10,7 @@ public class Main {
         if(m > n) {
             System.out.println((n+m) + " " + (m-n));
         }else {
-            System.out.println((n+m) + " " + (m-n));
+            System.out.println((n+m) + " " + (n-m));
         }
 
         
