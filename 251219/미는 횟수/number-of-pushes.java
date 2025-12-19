@@ -14,7 +14,7 @@ public class Main {
                 System.out.println(count);
                 break;
             }
-            s2 = s2.substring(s2.length() -1, s2.length()) + s2.substring(0,s2.length() -1);
+            s1 = s1.substring(s1.length() -1, s1.length()) + s1.substring(0,s1.length() -1);
             count++;
             if(i == s1.length()-1) {
                 System.out.println(-1);
