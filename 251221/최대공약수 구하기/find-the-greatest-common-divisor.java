@@ -5,7 +5,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         int m = sc.nextInt();
-        int num = 0;
+        int num = 1;
         for(int i = 1; i < n; i++) {
             if(n % i == 0 && m % i == 0) {
                 num = i;
