@@ -6,7 +6,7 @@ public class Main {
         int n = sc.nextInt();
         int m = sc.nextInt();
         int num = 1;
-        for(int i = 1; i < n; i++) {
+        for(int i = 1; i <= n; i++) {
             if(n % i == 0 && m % i == 0) {
                 num = i;
             }
