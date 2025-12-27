@@ -22,6 +22,8 @@ public class Main {
             }else {
                 System.out.println("Yes");
             }
+        }else {
+            System.out.println("No");
         }
     }
 }
