@@ -17,7 +17,7 @@ public class Main {
                 System.out.println("Yes");
             }
         }else if(m == 2 || m == 4 || m == 6 || m == 9 || m == 11) {
-            if(d > 31) {
+            if(d > 30) {
                 System.out.println("No");
             }else {
                 System.out.println("Yes");
