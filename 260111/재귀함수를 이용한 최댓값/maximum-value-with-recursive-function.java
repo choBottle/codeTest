@@ -2,14 +2,17 @@ import java.util.Scanner;
 public class Main {
 
     public static int biggest(int[] arr, int i, int num) {
+        if(arr[i] > num) {
+            num = arr[i];
+        }
+        
+
         if(i == arr.length -1){
             return num;
         }
 
-        if(arr[i] > num) {
-            num = arr[i];
-        }
         i++;
+        
         return biggest(arr, i, num);
     }
 
