@@ -6,47 +6,57 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         
-        int N = sc.nextInt(); 
-        int P = sc.nextInt(); 
-        int K = sc.nextInt(); 
-        int T = sc.nextInt(); 
+        // 1. 입력 순서: N, K, P, T (이미지 지문 기준)
+        if (!sc.hasNextInt()) return;
+        int N = sc.nextInt(); // 개발자 수
+        int K = sc.nextInt(); // 전염 가능 횟수
+        int P = sc.nextInt(); // 처음 감염자 번호
+        int T = sc.nextInt(); // 악수 횟수
 
         int[][] shakes = new int[T][3];
         for (int i = 0; i < T; i++) {
-            shakes[i][0] = sc.nextInt(); 
-            shakes[i][1] = sc.nextInt(); 
-            shakes[i][2] = sc.nextInt(); 
+            shakes[i][0] = sc.nextInt(); // t초
+            shakes[i][1] = sc.nextInt(); // x 개발자
+            shakes[i][2] = sc.nextInt(); // y 개발자
         }
 
+        // 2. 시간(t) 기준으로 오름차순 정렬
         Arrays.sort(shakes, new Comparator<int[]>() {
             @Override
             public int compare(int[] o1, int[] o2) {
-                return o1[0] - o2[0];
+                return Integer.compare(o1[0], o2[0]);
             }
         });
 
+        // 감염 상태 및 전염 횟수 추적
         boolean[] isInfected = new boolean[N + 1];
         int[] spreadCount = new int[N + 1];
 
-        isInfected[P] = true; 
+        isInfected[P] = true; // 최초 감염자
 
+        // 3. 시뮬레이션 진행
         for (int i = 0; i < T; i++) {
-            int p1 = shakes[i][1];
-            int p2 = shakes[i][2];
+            int x = shakes[i][1];
+            int y = shakes[i][2];
 
-            boolean p1WasInfected = isInfected[p1];
-            boolean p2WasInfected = isInfected[p2];
+            // 이번 악수 전의 감염 상태를 미리 저장 (동시 전염 로직을 위해)
+            boolean xInfected = isInfected[x];
+            boolean yInfected = isInfected[y];
 
-            if (p1WasInfected && spreadCount[p1] < K) {
-                isInfected[p2] = true;
-                spreadCount[p1]++;
+            // x가 감염자이고 전염 기회가 남았을 때
+            if (xInfected && spreadCount[x] < K) {
+                isInfected[y] = true; // y 전염 (이미 감염됐어도 상태 유지)
+                spreadCount[x]++;     // x의 전염 횟수 사용
             }
-            if (p2WasInfected && spreadCount[p2] < K) {
-                isInfected[p1] = true;
-                spreadCount[p2]++;
+
+            // y가 감염자이고 전염 기회가 남았을 때
+            if (yInfected && spreadCount[y] < K) {
+                isInfected[x] = true; // x 전염 (이미 감염됐어도 상태 유지)
+                spreadCount[y]++;     // y의 전염 횟수 사용
             }
         }
 
+        // 4. 결과 출력
         StringBuilder sb = new StringBuilder();
         for (int i = 1; i <= N; i++) {
             sb.append(isInfected[i] ? "1" : "0");
