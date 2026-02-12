@@ -18,10 +18,13 @@ public class Main {
 
             if(A < 11) {
                 System.out.println(-1);
+                break;
             }else if(A == 11 && B < 11) {
                 System.out.println(-1);
+                break;
             }else if(A == 11 && B == 11 && C < 11) {
                 System.out.println(-1);
+                break;
             }else if(A == A1 && B == B1 && C == C1) {
                 System.out.println(count);
                 break;
