@@ -1,26 +1,26 @@
 import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        int[] x1 = new int[n];
-        int[] x2 = new int[n];
-        int[] arr = new int[100];
-        for (int i = 0; i < n; i++) {
-            x1[i] = sc.nextInt();
-            x2[i] = sc.nextInt();
+        
+        int[] count = new int[201];
 
-            for(int j = x1[i];j <= x2[i]; j++) {
-                arr[j]++;
+        for (int i = 0; i < n; i++) {
+            int x1 = sc.nextInt() + 100; 
+            int x2 = sc.nextInt() + 100;
+
+            for (int j = x1; j < x2; j++) {
+                count[j]++;
             }
         }
 
         int biggest = 0;
-
-        for (int i = 0; i < 100; i++) {
-            if(arr[i] > biggest) {
-                biggest = arr[i];
-            } 
+        for (int i = 0; i < 201; i++) {
+            if (count[i] > biggest) {
+                biggest = count[i];
+            }
         }
 
         System.out.println(biggest);
