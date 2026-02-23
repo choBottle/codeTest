@@ -25,8 +25,8 @@ public class Main {
 
         int count = 0;
 
-        for(int i = 0; i <= 100; i++) {
-            for(int j = 0; j <= 100; j++) {
+        for(int i = 0; i <= 200; i++) {
+            for(int j = 0; j <= 200; j++) {
                 if(arr[i][j] == 1) {
                     count++;
                 }
