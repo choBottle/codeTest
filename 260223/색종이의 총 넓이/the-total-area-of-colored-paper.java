@@ -3,13 +3,14 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        int[][] arr = new int[101][101];
+        int[][] arr = new int[201][201];
+        int offset = 100;
         int n = sc.nextInt();
         int[] x = new int[n];
         int[] y = new int[n];
         for (int i = 0; i < n; i++) {
-            x[i] = sc.nextInt();
-            y[i] = sc.nextInt();
+            x[i] = sc.nextInt() + offset;
+            y[i] = sc.nextInt() + offset;
 
             for(int j = x[i]; j < x[i]+8; j++) {
                 for(int k = y[i]; k < y[i]+8; k++) {
