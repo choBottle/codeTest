@@ -9,21 +9,21 @@ public class Main {
             arr[i] = sc.nextInt();
         }
         
-        int count = 1;
+        int maxCount = 0;
         int currentCount = 0;
 
         for (int i = 0; i < n; i++) {
-            if((i != 0 && arr[i] != arr[i - 1]) || i == n) {
-                if(count < currentCount) {
-                    count = currentCount;
-                }
+            if (i == 0 || arr[i] == arr[i - 1]) {
+                currentCount++;
+            } else {
                 currentCount = 1;
             }
-            if(i == 0 || arr[i] == arr[i - 1]) {
-                currentCount++;
+
+            if (currentCount > maxCount) {
+                maxCount = currentCount;
             }
         }
 
-        System.out.println(count);
+        System.out.println(maxCount);
     }
 }
