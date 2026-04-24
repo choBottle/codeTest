@@ -7,17 +7,22 @@ public class Main {
         int n = sc.nextInt();
         int k = sc.nextInt();
 
-        int[] arr = new int[n+1];
+        int[] arr = new int[n]; 
 
         for(int i = 0; i < n; i++) {
             arr[i] = sc.nextInt();
         }
+        
         int maxNum = -1;
 
-        for (int i = 0; (n == k && i == 0) || i < n - k; i++) {
-            for(int j = i+1; j < i+k+1; j++) {
-                if(arr[i] == arr[j] && maxNum < arr[i]) {
-                    maxNum = arr[i];
+        for (int i = 0; i < n; i++) {
+            int limit = Math.min(i + k, n - 1); 
+            
+            for(int j = i + 1; j <= limit; j++) {
+                if(arr[i] == arr[j]) {
+                    if(maxNum < arr[i]) {
+                        maxNum = arr[i];
+                    }
                 }
             }
         }
