@@ -15,7 +15,7 @@ public class Main {
         int maxNum = -1;
 
         for(int i = 0; i < n-3; i++) {
-            for(int j = i+1; j < i+4; j++) {
+            for(int j = i+1; j < i+k+1; j++) {
                 if(arr[i] == arr[j] && maxNum < arr[i]) {
                     maxNum = arr[i];
                 }
